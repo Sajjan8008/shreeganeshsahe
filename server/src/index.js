@@ -12,7 +12,6 @@ app.get('/', function (req, res) {
 
 
 
-// Use Routes
 // app.use('/', routes);
 
 // Serve static assets if in production
