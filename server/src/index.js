@@ -5,14 +5,6 @@ app.use(express.static(join(__dirname, 'build')));
 // app.use('/public', express.static(join(_dirname, '../public')));
 
 app.get('/', function (req, res) {
-<<<<<<< HEAD
-console.log(1)
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-
-app.listen(9000);
-=======
   res.sendFile(join(__dirname, 'build', 'index.html'));
 });
 
@@ -20,6 +12,7 @@ app.listen(9000);
 
 
 
+// Use Routes
 // app.use('/', routes);
 
 // Serve static assets if in production
@@ -34,4 +27,3 @@ app.listen(9000);
 
 const port = process.env.PORT || 5000;
   app.listen(port, () => console.log(`Server started on port ${port}`));
->>>>>>> 76f3344bc774e35c69028f42c60e5d8e9cea86b0
