@@ -10,13 +10,13 @@ import Game from '../models/Game.js';
 import Transaction from '../models/Transaction.js';
 import GameHistory from '../models/GameHistory.js';
 import GameCurrentUser from '../models/GameCurrentUser.js';
-import { Socket } from 'socket.io.js';
+import { Socket } from 'socket.io';
 import array from 'joi/lib/types/array.js';
 import TambolaGameHistory from '../models/TambolaGameHistory.js';
 import TambolaReward from '../models/TambolaReward.js';
 import TambolaGameTicket from '../models/TambolaGameTicket.js';
 
-let logger = require('../services/logger');
+import logger from '../services/logger.js';
 
 var promise = require('promise');
 

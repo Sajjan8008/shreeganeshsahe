@@ -1,33 +1,25 @@
-import 'dotenv';
-import {
-    createLogger,
-    transports,
-    format
-}  from 'winston';
-import 'winston-mongodb';
+import { createLogger, format, transports } from 'winston';
 
-let dbConnection = process.env.MONGO_URI_PROD;
+// Import mongodb
+import { configDotenv } from 'dotenv';
+import 'winston-mongodb';
+const connection = configDotenv().parsed.DB ? configDotenv().parsed.DB : configDotenv().parsed.LOCAL;
+
+
 const logger = createLogger({
     transports: [
-        new transports.MongoDB({
-            level: 'info',
-            db: dbConnection,
-            options: {
-                useUnifiedTopology: true
-            },
-            collection: 'info',
-            format: format.combine(format.timestamp(), format.json())
-        }),
-        new transports.MongoDB({
-            level: 'error',
-            db: dbConnection,
-            options: {
-                useUnifiedTopology: true
-            },
-            collection: 'error',
-            format: format.combine(format.timestamp(), format.json())
-        })
-    ]
-})
+        new transports.MongoDB(
+            {
+                lavel : 'error',
+                db:connection,
+                options:{ useUnifiedTopology: true },
+                collection:'error',
+                format: format.combine(format.timestamp(),format.json()),
 
-module.exports = logger;
+            }
+        )
+    ]
+});
+
+
+export default logger;

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import Joi from 'joi';
-import faker from 'faker';
+// import faker from 'faker';
 import requireLocalAuth from '../middleware/requireLocalAuth.js';
 import { registerSchema } from '../services/validators.js';
 import requireJwtAuth from '../middleware/requireJwtAuth.js';

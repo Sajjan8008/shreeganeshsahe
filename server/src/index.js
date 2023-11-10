@@ -17,7 +17,37 @@ app.get('/', function (req, res) {
 });
 
 
+import routes from './routes/index.js';
 
+
+// Bodyparser Middleware
+app.use(expresson());
+app.use(express.urlencoded({ extended: true }));
+
+app.use(passport.initialize());
+require('./services/jwtStrategy.js');
+require('./services/localStrategy.js');
+
+
+
+// Connect to Mongo
+mongoose
+  .connect(dbConnection, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+  })
+  .then(() => {
+    console.log('MongoDB Connected...');
+    //seedDb();
+    require('./services/schedule.js');
+  })
+  .catch((err) => console.log(err));
+
+    
+// Use Routes
+app.use('/', routes);
 
 
 if (isProduction) {

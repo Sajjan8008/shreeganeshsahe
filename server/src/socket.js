@@ -8,7 +8,7 @@ import passport from 'passport';
 import { Server } from "socket.io";
 import { createBetWithUpdate, repeatBet, updateSocket, usercoinsonaction, updateCurrentUser, ticketGameBuy } from './controllers/bettings.js';
 // import { show, sideShowStatus, sideshow, callPack, callChaal, cardSeen, playerConnect, playerDisconnect, refundAndRemoveCurrentRoom, dealerTip } from './controllers/teenpatti.js';
-// import {getLiveFutureGame, getDateWiseFutureGame, getTambolaGamebyId, getTambolaAllTicketsByGamePerSet, getTambolaAllTicketsByGame, tambolaTicketBooking, getUserByUserId, getTicketsByUserId, getFutureGameDates } from './controllers/tambola.js';
+import {getLiveFutureGame, getDateWiseFutureGame, getTambolaGamebyId, getTambolaAllTicketsByGamePerSet, getTambolaAllTicketsByGame, tambolaTicketBooking, getUserByUserId, getTicketsByUserId, getFutureGameDates } from './controllers/tambola.js';
 import { BADHINTS } from 'dns';
 import sleep from 'system-sleep';
 

@@ -17,7 +17,7 @@ const {
   Schema
 } = mongoose;
 
-let logger = require('../services/logger');
+import logger from '../services/logger.js';
 
 const NumberBettingHistorySchema = new Schema({
   number: {
