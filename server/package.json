@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start-prod": "npm run build && node ./build/index.js",
     "build": "npm run clean && npm run build-babel",
@@ -10,13 +11,26 @@
     "build-babel": "babel -d ./build ./src -s",
     "start-dev": "node --exec babel-node src/index.js",
     "server": "nodemon --exec babel-node src/index.js",
+    "socket": "nodemon --exec babel-node src/socket.js",
     "client": "npm start --prefix ../client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "sajjan",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.0.0",
+    "passport": "^0.6.0",
+    "referral-codes": "^3.0.0",
+    "socket.io": "^4.7.2",
+    "system-sleep": "^1.3.7",
+    "winston": "^3.11.0",
+    "winston-mongodb": "^5.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
