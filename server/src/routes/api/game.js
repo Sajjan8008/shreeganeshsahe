@@ -5,7 +5,8 @@ import Joi from 'joi';
 import { gameSchema } from '../../services/validators.js';
 import { updateStatus } from '../../services/validators.js';
 import {  checkpermission, verifyToken  } from '../../helper/common.js';
-let logger = require('../../services/logger');
+import mongoose from 'mongoose';
+const  ObjectId  = mongoose.Schema.Types.ObjectId;
 const router = Router();
 
 /**

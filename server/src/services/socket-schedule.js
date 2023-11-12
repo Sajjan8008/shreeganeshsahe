@@ -23,7 +23,8 @@ import Boot from '../models/Boot.js';
 import GameConnectBoat from '../models/GameConnectBoat.js';
 const env = process.env;
 const schedule = require('node-schedule');
-const ObjectId = require('mongoose').Types.ObjectId;
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 
 let logger = require('./logger');

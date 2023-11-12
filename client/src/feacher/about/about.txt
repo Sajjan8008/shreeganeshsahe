@@ -1,0 +1,227 @@
+import React from 'react';
+import { Component } from 'react';
+import { Button, Card, Row, Col } from 'react-bootstrap';
+
+import {
+  GiftOutlined,
+  CalendarOutlined,
+  HeatMapOutlined,
+  StarOutlined,
+  MailOutlined,
+  PhoneOutlined
+} from '@ant-design/icons';
+import './about.css';
+
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { goToAnchor } from 'react-scrollable-anchor';
+import ScrollTrigger from 'react-scroll-trigger';
+// import Me from '../public/assets';
+import Me from '../../assets/home.jpg';
+
+import Helpers from './../../helpers.js';
+
+class About extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: false,
+      loading: false,
+      errors: null,
+      file: 'pdf'
+    };
+  }
+
+  onEnterViewport() {
+    this.setState({
+      visible: true
+    });
+  }
+  // handleSubmit = event => {
+  //   this.setState(
+  //     {
+  //       errors: null,
+  //       loading: true
+  //     },
+  //     () => {
+  //       Helpers.httpRequest(
+  //         `http://localhost:5000?file=${this.state.file}`,
+  //         'get'
+  //       )
+  //         .then(response => response.blob())
+  //         .then(blob => {
+  //           // create blob link
+  //           const url = window.URL.createObjectURL(new Blob([blob]));
+  //           const link = document.createElement('a');
+  //           link.href = url;
+  //           link.setAttribute('download', `sample.${this.state.file}`);
+
+  //           // append to html
+  //           document.body.appendChild(link);
+
+  //           // download
+  //           link.click();
+
+  //           // remove
+  //           link.parentNode.removeChild(link);
+
+  //           this.setState({
+  //             loading: false
+  //           });
+  //         })
+  //         .catch(error => {
+  //           error.json().then(json => {
+  //             this.setState({
+  //               errors: json,
+  //               loading: false
+  //             });
+  //           });
+  //         });
+  //     }
+  //   );
+
+  //   event.preventDefault();
+  // };
+
+  handleChange = event => {
+    this.setState({
+      file: event.currentTarget.value.substring(0, 3)
+    });
+  };
+
+  render() {
+    const name = 'Anthony Conrad';
+    const { loading, errors, file } = this.state;
+
+    return (
+      <div align='center' className='img-2'>
+        <ScrollableAnchor id={'section2'}>
+          <div>
+            <span className='asa'>hjhjjg</span>
+          </div>
+        </ScrollableAnchor>
+        <Card className={this.state.visible ? 'fadeIn' : 'fadeOut'}>
+          <div className='aspace'></div>
+
+          <span className='atitle'>About Me</span>
+          <div className='atspace'></div>
+
+          <div>
+            <Card>
+              <Row>
+                <Col>H</Col>
+                <Col className='col'>
+                  <img src={Me} alt='Logo' className='apic' />
+                </Col>
+                <Col>
+                  <Col className='aheader'>
+                    I'm Anthony Conrad and I'm a Developer
+                  </Col>
+                  <Col className='apar'>
+                    Hi! My name is <span className='aname'>{name}</span>. I am a
+                    Web Developer, and I am very passionate and dedicated to my
+                    work. I beleive that I have acquired the skills and
+                    knowledge necessary to make your project a success. My main
+                    focus is creating expressive React Web Applications. I look
+                    forward to working with you!{' '}
+                  </Col>
+                  <Row className='ar1'>
+                    <Col className='awidth'>
+                      <Col className='arow1'>
+                        <div className='ab'>
+                          <GiftOutlined className='aicon' />{' '}
+                          <span className='atxt'>Birthday:</span>
+                          <span className='ab1'>02.28.1997</span>
+                        </div>
+                        <div>
+                          <CalendarOutlined className='aicon' />{' '}
+                          <span className='atxt'>Age:</span>{' '}
+                          <span className='ab1'>23</span>
+                        </div>
+                      </Col>
+                      <Col className='arow1'>
+                        <div className='ab2'>
+                          <HeatMapOutlined className='aicon' />{' '}
+                          <span className='atxt1'>Location:</span>
+                          <span className='aaa'>Fort Wayne, IN</span>
+                        </div>
+                        <div>
+                          <StarOutlined className='aicon' />{' '}
+                          <span className='atxt'>Likes:</span>{' '}
+                          <span className='aaa'>Reading</span>
+                        </div>
+                      </Col>
+                      <Col className='arow1'>
+                        <div className='ab3'>
+                          <MailOutlined className='aicon' />{' '}
+                          <span className='atxt2'>Email:</span>
+                          <span className='aaaa'>AntCon1000@gmail.com</span>
+                        </div>
+                        <div className='ab3'>
+                          <PhoneOutlined className='aicon' />{' '}
+                          <span className='atxt3'>Phone:</span>{' '}
+                          <span className='aaaa'>260-715-0129</span>
+                        </div>
+                      </Col>
+                      <Col>
+                        <div>
+                          <form onSubmit={this.handleSubmit}>
+                            <div className='input-group mb-3'>
+                              <input
+                                disabled={loading}
+                                onChange={this.handleChange}
+                                className='aform-control'
+                                value={file}
+                                type='text'
+                                name='file'
+                              />
+                            </div>
+
+                            {errors ? (
+                              <div className='form-group'>
+                                <div className='alert alert-danger'>
+                                  <strong>Error!</strong>{' '}
+                                  {errors.message || 'Something went wrong.'}
+                                </div>
+                              </div>
+                            ) : null}
+
+                            <div className='form-group'>
+                              <Button
+                                variant='primary'
+                                size='lg'
+                                block
+                                className='abtn'
+                                type='submit'
+                              >
+                                {loading ? 'Downloading...' : 'Download CV'}
+                              </Button>
+                            </div>
+                          </form>
+                          <Button
+                            variant='primary'
+                            size='lg'
+                            block
+                            className='abtn'
+                            onClick={() => goToAnchor('section4')}
+                          >
+                            Send Message
+                          </Button>{' '}
+                        </div>
+                      </Col>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Card>
+
+            <ScrollTrigger onEnter={() => this.onEnterViewport()}>
+              <span></span>
+            </ScrollTrigger>
+          </div>
+        </Card>
+      </div>
+    );
+  }
+}
+
+export default About;

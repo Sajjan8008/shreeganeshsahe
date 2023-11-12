@@ -12,12 +12,12 @@ import Transaction from './Transaction.js';
 import User from './User.js';
 import Setting from './Setting.js';
 import GameConnectBoat from './GameConnectBoat.js';
-const ObjectId = require('mongoose').Types.ObjectId;
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 const {
   Schema
 } = mongoose;
 
-import logger from '../services/logger.js';
+// import logger from '../services/logger.js';
 
 const NumberBettingHistorySchema = new Schema({
   number: {

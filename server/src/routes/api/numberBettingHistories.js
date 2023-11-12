@@ -4,9 +4,9 @@ import NumberBettingHistory from '../../models/NumberBettingHistory.js';
 import { settingsData, verifyToken,bettingAlowedGame, checkpermission } from '../../helper/common.js';
 import GameHistory from '../../models/GameHistory.js';
 import NumberSet from '../../models/NumberSet.js';
-let logger = require('../../services/logger');
+const  ObjectId  = mongoose.Schema.Types.ObjectId;
+import mongoose from 'mongoose';
 const router = Router();
-const ObjectId = require('mongoose').Types.ObjectId;
 
 
 // Roulette draw number

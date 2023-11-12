@@ -16,13 +16,14 @@ import TambolaGameHistory from '../models/TambolaGameHistory.js';
 import TambolaReward from '../models/TambolaReward.js';
 import TambolaGameTicket from '../models/TambolaGameTicket.js';
 
-import logger from '../services/logger.js';
+// import logger from '../services/logger.js';
+import mongoose from 'mongoose';
 
-var promise = require('promise');
+import promise from 'fs/promises';
 
 const router = Router();
 
-const ObjectId = require('mongoose').Types.ObjectId;
+const  ObjectId  =  mongoose.Schema.Types.ObjectId;
 
 var socketConnection = {};
 

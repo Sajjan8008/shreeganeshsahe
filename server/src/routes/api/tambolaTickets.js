@@ -1,15 +1,15 @@
 import { Router } from 'express';
 import requireJwtAuth from '../../middleware/requireJwtAuth.js';
 import TambolaTicket from '../../models/TambolaTickets.js';
-import {parse} from 'csv-parse.js';
-import fs from 'fs.js';
+import {parse} from 'csv-parse';
+import fs from 'fs';
 import Joi from 'joi';
 import 'dotenv';
 import { updateStatus } from '../../services/validators.js';
 import {  checkpermission, verifyToken, getDisplayId,getAllGames  } from '../../helper/common.js';
-let logger = require('../../services/logger');
-const { getIndianMaleName, getIndianFemaleName } = require('random-in');
-const ObjectId = require('mongoose').Types.ObjectId;
+import { getIndianMaleName, getIndianFemaleName }  from 'random-in';
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 const router = Router();
 const env = process.env;

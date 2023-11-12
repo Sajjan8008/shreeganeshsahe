@@ -3,8 +3,9 @@ import requireJwtAuth from '../../middleware/requireJwtAuth.js';
 import DailyRewards from '../../models/DailyRewards.js';
 import { checkpermission, verifyToken  } from '../../helper/common.js';
 import Feedback from '../../models/FeedBack.js';
-const ObjectId = require('mongoose').Types.ObjectId;
-let logger = require('../../services/logger');
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
+
 
 const router = Router();
 

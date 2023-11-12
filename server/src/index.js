@@ -1,6 +1,10 @@
 import express from 'express';
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
+import bodyParser from 'body-parser';
+import passport from 'passport';
+import routes from './routes/index.js';
+import mongoose from 'mongoose';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -17,33 +21,33 @@ app.get('/', function (req, res) {
 });
 
 
-import routes from './routes/index.js';
 
 
 // Bodyparser Middleware
-app.use(expresson());
+
+// parse application/json
+app.use(bodyParser .json())
+
 app.use(express.urlencoded({ extended: true }));
 
 app.use(passport.initialize());
-require('./services/jwtStrategy.js');
-require('./services/localStrategy.js');
+// import './services/jwtStrategy.js';                        
+// import './services/localStrategy.js';
 
 
 
 // Connect to Mongo
-mongoose
-  .connect(dbConnection, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-  })
-  .then(() => {
-    console.log('MongoDB Connected...');
-    //seedDb();
-    require('./services/schedule.js');
-  })
-  .catch((err) => console.log(err));
+// mongoose
+//   .connect(dbConnection, {
+
+    
+//   })
+//   .then(() => {
+//     console.log('MongoDB Connected...');
+//     //seedDb();
+//     // require('./services/schedule.js');
+//   })
+//   .catch((err) => console.log(err));
 
     
 // Use Routes

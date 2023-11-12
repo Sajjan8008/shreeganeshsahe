@@ -1,0 +1,174 @@
+.img-2 {
+  background-color: white;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 80%;
+  max-height: 100%;
+  align-content: right;
+  right: 0;
+  position: flex;
+  /* background-color: rgba(255, 255, 255, 0.001); */
+  border: none;
+
+  overflow: hidden;
+}
+
+.fadeOut {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+
+.fadeIn {
+  opacity: 1;
+  max-width: 500%;
+  max-height: 100%;
+  align-content: right;
+  right: 0;
+  position: flex;
+  /* background-color: rgba(255, 255, 255, 0.001); */
+  border: none;
+  overflow: hidden;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+}
+
+.aspace {
+  height: 8rem;
+}
+
+.apic {
+  height: 500px;
+  box-shadow: 2px 2px tomato;
+
+  margin-right: 10px;
+}
+
+.atext {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.atspace {
+  height: 40px;
+}
+
+.atitle {
+  font-size: 50px;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 2px tomato;
+  justify-content: flex-start;
+  background-color: aliceblue;
+}
+
+.aheader {
+  font-size: 30px;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 15px;
+  background-color: aliceblue;
+
+}
+
+.apar {
+  font-size: 20px;
+  color: wheat;
+  font-family: 'Roboto Mono', monospace;
+  background-color: aliceblue;
+}
+
+.arow1 {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+.ab {
+  padding-right: 36px;
+}
+
+.ar1 {
+  padding-top: 25px;
+}
+
+.aicon {
+  color: red;
+  font-size: 25px;
+}
+
+.ab1 {
+  padding-left: 23px;
+  color: tomato;
+}
+
+.atxt {
+  font-family: 'Oswald', sans-serif;
+}
+
+.ab2 {
+  background-color: yellow;
+  padding-right: 20px;
+}
+
+.atxt1 {
+  padding-right: 10px;
+
+  font-family: 'Oswald', sans-serif;
+}
+
+.aaa {
+  padding-left: 3px;
+  color: tomato;
+}
+
+.acol {
+  overflow: visible;
+}
+
+.atxt2 {
+  padding-right: 15px;
+
+  font-family: 'Oswald', sans-serif;
+}
+
+.ab3 {
+  width: 260px;
+}
+
+.atxt3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+.abtn {
+  background-color: red;
+  border: red;
+  transition: 0.3s;
+}
+
+.abtn:hover {
+  background-color: blue;
+}
+
+.abtn:onclick {
+  /* background-color: black; */
+  color: black;
+}
+
+.aaaa {
+  color: tomato;
+}
+
+.aname {
+  color: red;
+  font-style: italic;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.asa {
+  opacity: 0.000000001;
+}
+
+.aform-control {
+  opacity: 0.00000002;
+}

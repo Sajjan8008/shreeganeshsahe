@@ -1,18 +1,19 @@
-import GameHistory from "../../models/GameHistory";
+import GameHistory from "../../models/GameHistory.js";
 import {
   Router
 } from 'express';
 import { verifyToken, checkpermission  } from '../../helper/common.js';
 import requireJwtAuth from '../../middleware/requireJwtAuth.js';
-import User from "../../models/User";
-import Betting from "../../models/Betting";
-import Payment from "../../models/Payment";
+import User from "../../models/User.js";
+import Betting from "../../models/Betting.js";
+import Payment from "../../models/Payment.js";
 import 'dotenv';
-let logger = require('../../services/logger');
+
 
 const env = process.env;
 const router = Router();
-const ObjectId = require('mongoose').Types.ObjectId;
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 var start = new Date();
 start.setHours(0, 0, 0, 0);
@@ -20,7 +21,7 @@ start.setHours(0, 0, 0, 0);
 var end = new Date();
 end.setHours(23, 59, 59, 999);
 
-var promise = require('promise')
+import promise from 'fs/promises'
 
 router.get('/', requireJwtAuth, async (req, res) => {
 

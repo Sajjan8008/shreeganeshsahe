@@ -11,8 +11,9 @@ import User from '../../models/User.js';
 import { checkpermission, verifyToken, treeUnderUser  } from '../../helper/common.js';
 import GameHistory from '../../models/GameHistory.js';
 import Game from '../../models/Game.js';
-let logger = require('../../services/logger');
-const ObjectId = require('mongoose').Types.ObjectId;
+
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 const router = Router();
 
 /**
@@ -123,7 +124,7 @@ router.post('/', requireJwtAuth, async (req, res) => {
     let currentUserId = user._id;
     const currentUserRole = user.role.id;
     let filters = {};
-    const ObjectId = require('mongoose').Types.ObjectId;
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
     let type = req.body.type;
     let allTransaction = req.body.alltransaction;
@@ -223,7 +224,7 @@ router.post('/', requireJwtAuth, async (req, res) => {
     
 
     let filters = {};
-    const ObjectId = require('mongoose').Types.ObjectId;
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
     let cuDate = new Date();
     

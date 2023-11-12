@@ -5,11 +5,12 @@ import Joi from 'joi';
 import { addBettingType, updateBettingType } from '../../services/validators.js';
 import { settingsData, bettingAlowedGame, crGame, verifyToken, checkpermission  } from '../../helper/common.js';
 import Setting from '../../models/Setting.js';
-let logger = require('../../services/logger');
+import mongoose from 'mongoose';
+const  ObjectId  = mongoose.Schema.Types.ObjectId;
+
 import 'dotenv';
 
 const router = Router();
-const ObjectId = require('mongoose').Types.ObjectId;
 
 const env = process.env;
 /**

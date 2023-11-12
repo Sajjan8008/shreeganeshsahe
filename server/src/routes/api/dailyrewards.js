@@ -4,7 +4,8 @@ import DailyRewards from '../../models/DailyRewards.js';
 import { checkpermission, verifyToken  } from '../../helper/common.js';
 import Transaction from '../../models/Transaction.js';
 import User from '../../models/User.js';
-const ObjectId = require('mongoose').Types.ObjectId;
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 const router = Router();
 

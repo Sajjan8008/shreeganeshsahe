@@ -1,0 +1,73 @@
+.cimg {
+  background-image: url(../../assets/bnr.jpg);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cfadeOut {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}
+
+.cfadeIn {
+  opacity: 1;
+  max-width: 500%;
+  max-height: 100%;
+  align-content: right;
+  right: 0;
+  position: flex;
+  background-color: rgba(255, 255, 255, 0.001);
+  border: none;
+  overflow: hidden;
+  transition: width 0.5s, height 0.5s, opacity 0.5s 0.5s;
+}
+
+.ccard {
+  max-width: 80%;
+  max-height: 100%;
+  align-content: right;
+  right: 0;
+  float: right;
+  background-color: rgba(255, 255, 255, 0.001);
+  border: none;
+
+  overflow: hidden;
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.cbtn {
+  background-color: red;
+  border: red;
+  transition: 0.3s;
+  padding: 15px 48%;
+  color: white;
+  border-radius: 8px;
+}
+
+.cbtn:hover {
+  background-color: black;
+}
+
+.cspc {
+  height: 350px;
+}
+
+.ctitle {
+  align-self: center;
+  padding-bottom: 5px;
+  font-size: 50px;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 2px tomato;
+}
+
+.clabel {
+  font-size: 30px;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 2px tomato;
+}

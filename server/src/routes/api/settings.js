@@ -11,9 +11,9 @@ import {
   checkpermission,
   settingsData
 } from '../../helper/common.js';
-let logger = require('../../services/logger');
 const router = Router();
-const ObjectId = require('mongoose').Types.ObjectId;
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 const env = process.env;
 

@@ -14,17 +14,17 @@ import {
 } from '../../helper/common.js';
 import 'dotenv';
 const env = process.env;
-import {
-  single
-} from 'joi/lib/types/array.js';
+// import {
+//   single
+// } from 'joi/lib/types/array.js';
 import User from '../../models/User.js';
 import PlayingData from '../../models/PlayingData.js';
 import Room from '../../models/Room.js';
 import Transaction from '../../models/Transaction.js';
-let logger = require('../../services/logger.js');
+import mongoose from 'mongoose';
+const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 const router = Router();
-const ObjectId = require('mongoose').Types.ObjectId;
 
 
 /***

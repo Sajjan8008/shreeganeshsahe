@@ -1,4 +1,4 @@
-import passport from 'passport.js';
+import passport from 'passport';
 import { Strategy as FacebookStrategy } from 'passport-facebook.js';
 
 import User from '../models/User.js';

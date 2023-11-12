@@ -8,8 +8,9 @@ import Transaction from "../models/Transaction.js";
 
 // var _ = require("lodash");
 var cards = require("../helper/card");
-import logger from '../services/logger.js';
-const ObjectId = require('mongoose').Types.ObjectId;
+// import logger from '../services/logger.js';
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 import 'dotenv';
 const env = process.env;
 

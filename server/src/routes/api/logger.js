@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import requireJwtAuth from '../../middleware/requireJwtAuth.js';
-let logger = require('../../services/logger');
+
 const router = Router();
 
 /**

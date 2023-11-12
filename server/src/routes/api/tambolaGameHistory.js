@@ -5,25 +5,26 @@ import GameHistory from '../../models/GameHistory.js';
 import TambolaTicket from '../../models/TambolaTickets.js';
 import TambolaGameTicket from '../../models/TambolaGameTicket.js';
 import TambolaReward from '../../models/TambolaReward.js';
-import { getLiveFutureGame, getTambolaGamebyId, getBookedTickets,getTambolaAllTicketsByGame, tambolaBookMultipleSets, tambolaCancelMultipleSets } from '../../controllers/tambola'
+import { getLiveFutureGame, getTambolaGamebyId, getBookedTickets,getTambolaAllTicketsByGame, tambolaBookMultipleSets, tambolaCancelMultipleSets } from '../../controllers/tambola.js'
 
 import Joi from 'joi';
 import { gameSchema } from '../../services/validators.js';
 import { updateStatus } from '../../services/validators.js';
 import { checkpermission, verifyToken } from '../../helper/common.js';
-const ObjectId = require('mongoose').Types.ObjectId;
-let logger = require('../../services/logger');
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
+// import logger from '../../services/logger.js';
 const router = Router();
 
-const QUCIK_FIVE = '6447b763369802467f42da91.js';
-const QUCIK_SEVEN = '6447b774369802467f42da93.js';
-const FOUR_CORNER = '6447b7b0369802467f42db23.js';
-const SET_CORNER = '6447b82e369802467f42db77.js';
-const TOP_LINE = '6447b842369802467f42db79.js';
-const BOTTOM_LINE = '6447b893369802467f42dc20.js';
-const MIDDLE_LINE = '6447b89a369802467f42dc22.js';
-const FULL_HOUSE = '644ba55dec7aa86e5104ea39.js';
-const SECOND_FULL_HOUSE = '6447b903369802467f42dc39.js';
+const QUCIK_FIVE = '6447b763369802467f42da91';
+const QUCIK_SEVEN = '6447b774369802467f42da93';
+const FOUR_CORNER = '6447b7b0369802467f42db23';
+const SET_CORNER = '6447b82e369802467f42db77';
+const TOP_LINE = '6447b842369802467f42db79';
+const BOTTOM_LINE = '6447b893369802467f42dc20';
+const MIDDLE_LINE = '6447b89a369802467f42dc22';
+const FULL_HOUSE = '644ba55dec7aa86e5104ea39';
+const SECOND_FULL_HOUSE = '6447b903369802467f42dc39';
 
 /**
  * Get the listing of Game.

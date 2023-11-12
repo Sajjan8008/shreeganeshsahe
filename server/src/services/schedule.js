@@ -12,7 +12,8 @@ import 'dotenv';
 import LockedDevices from '../models/LockedDevices.js';
 const env = process.env;
 const schedule = require('node-schedule');
-const ObjectId = require('mongoose').Types.ObjectId;
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 let logger = require('./logger');
 

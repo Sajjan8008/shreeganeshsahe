@@ -36,16 +36,14 @@ let schedule;
 // Connect to Mongo
 mongoose
   .connect(dbConnection, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
+
+    
   })
   .then(() => {
     console.log('MongoDB Connected...');
     //seedDb();
     refundAndRemoveCurrentRoom();
-    schedule = require('./services/socket-schedule');
+    // schedule = require('./services/socket-schedule');
     schedule.ioObject(io);
     // Todo: Tmp comment 
 

@@ -3,8 +3,9 @@ import requireJwtAuth from '../../middleware/requireJwtAuth.js';
 import TambolaReward from '../../models/TambolaReward.js';
 import Joi from 'joi';
 import {  checkpermission, verifyToken  } from '../../helper/common.js';
-const ObjectId = require('mongoose').Types.ObjectId;
-let logger = require('../../services/logger');
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
+
 const router = Router();
 
 /**

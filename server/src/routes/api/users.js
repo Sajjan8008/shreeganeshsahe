@@ -15,10 +15,11 @@ import 'dotenv';
 import LockedDevices from '../../models/LockedDevices.js';
 const env = process.env;
 
-let logger = require('../../services/logger');
+// import logger from '../../services/logger.js';
 
 const router = Router();
-const ObjectId = require('mongoose').Types.ObjectId;
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 let mansImages = [0,1,2,4,6,7,9,11,12,14];
 
 // requireJwtAuth

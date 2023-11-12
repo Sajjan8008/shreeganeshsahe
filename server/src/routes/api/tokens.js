@@ -3,7 +3,8 @@ import requireJwtAuth from '../../middleware/requireJwtAuth.js';
 import Token from '../../models/Token.js';
 
 import { checkpermission, verifyToken } from '../../helper/common.js';
-let logger = require('../../services/logger');
+import mongoose from 'mongoose';
+const  ObjectId  = mongoose.Schema.Types.ObjectId;
 const router = Router();
 
 /**

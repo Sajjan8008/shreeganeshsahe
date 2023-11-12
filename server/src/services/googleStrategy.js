@@ -1,4 +1,4 @@
-import passport from 'passport.js';
+import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth2.js';
 
 import User from '../models/User.js';

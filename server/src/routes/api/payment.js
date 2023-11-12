@@ -7,18 +7,17 @@ import { updateStatus } from '../../services/validators.js';
 import {  markAsPrimeUser, checkpermission, verifyToken, canUserUploadScreenShort, settingsData  } from '../../helper/common.js';
 import User from '../../models/User.js';
 import Payment from '../../models/Payment.js';
-import FormData from 'form-data.js';
+import FormData from 'form-data';
 import Transaction from '../../models/Transaction.js';
 import Setting from '../../models/Setting.js';
 import AmountOption from '../../models/AmountOption.js';
 import fileGetContents from 'file-get-contents'
-import sha256 from 'sha256.js';
-import { createHash } from 'crypto.js';
+import sha256 from 'sha256';
+import { createHash } from 'crypto';
 
 
-let logger = require('../../services/logger');
-const axios = require('axios');
-const multer  = require('multer');
+import axios  from 'axios';
+import multer  from 'multer';
 //const uploadDestination = multer({ dest: 'public/uploads/payment/' });
 
 let uploadDestination = multer({
@@ -33,7 +32,8 @@ let uploadDestination = multer({
        }
     })
 })
-const ObjectId = require('mongoose').Types.ObjectId;
+import mongoose from 'mongoose';
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 const router = Router();
 

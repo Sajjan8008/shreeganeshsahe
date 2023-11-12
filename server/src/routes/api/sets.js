@@ -6,7 +6,7 @@ import {
   import {
     verifyToken
   } from '../../helper/common.js';
-  let logger = require('../../services/logger');
+  
 
   const router = Router();
   

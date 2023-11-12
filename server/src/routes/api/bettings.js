@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import {
   json,
   response,
@@ -6,9 +7,9 @@ import {
 import requireJwtAuth from '../../middleware/requireJwtAuth.js';
 import Betting from '../../models/Betting.js';
 import Joi from 'joi';
-import {
-  insertRouletteBetting, insertLuckyCardTicketBetting
-} from '../../services/validators.js';
+// import {
+//   insertRouletteBetting, insertLuckyCardTicketBetting
+// } from '../../services/validators.js';
 import BettingType from '../../models/BettingType.js';
 import 'dotenv';
 
@@ -24,14 +25,13 @@ import User from '../../models/User.js';
 import Game from '../../models/Game.js';
 import Transaction from '../../models/Transaction.js';
 import GameHistory from '../../models/GameHistory.js';
-let logger = require('../../services/logger');
+const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 
-var promise = require('promise')
 
+import promise from 'fs/promises'
 const router = Router();
 
-const ObjectId = require('mongoose').Types.ObjectId;
 
 /**
  * Get bettings of current user in unity.
@@ -56,7 +56,7 @@ router.get('/unityfilter', requireJwtAuth, async (req, res) => {
 
     filters.status = "completed";
 
-    const ObjectId = require('mongoose').Types.ObjectId;
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
     let start = new Date();
     start.setHours(0, 0, 0, 0);
@@ -152,7 +152,7 @@ router.post('/filter', requireJwtAuth, async (req, res) => {
 
     let filters = {};
 
-    const ObjectId = require('mongoose').Types.ObjectId;
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
     let cuDate = new Date();
     cuDate.setHours(0, 0, 0, 0);
@@ -449,7 +449,7 @@ router.post('/tambolabooking', requireJwtAuth, async (req, res) => {
 
     let filters = {};
 
-    const ObjectId = require('mongoose').Types.ObjectId;
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
     let cuDate = new Date();
     cuDate.setHours(0, 0, 0, 0);
@@ -740,7 +740,7 @@ router.post('/turnover', requireJwtAuth, async (req, res) => {
 
     filters.status = "completed";
 
-    const ObjectId = require('mongoose').Types.ObjectId;
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 
     let cuDate = new Date();
@@ -1057,7 +1057,7 @@ router.post('/turnover', requireJwtAuth, async (req, res) => {
 
     filters.status = "completed";
 
-    const ObjectId = require('mongoose').Types.ObjectId;
+  const  ObjectId  = mongoose.Schema.Types.ObjectId;
 
 
     let cuDate = new Date();

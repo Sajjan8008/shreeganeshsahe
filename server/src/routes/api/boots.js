@@ -4,7 +4,7 @@ import Boot from '../../models/Boot.js';
 import Joi from 'joi';
 import { updateStatus } from '../../services/validators.js';
 import {  checkpermission, verifyToken  } from '../../helper/common.js';
-let logger = require('../../services/logger');
+
 const router = Router();
 
 

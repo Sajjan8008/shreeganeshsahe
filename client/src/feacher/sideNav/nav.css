@@ -1,0 +1,49 @@
+.home {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+  
+    transition: 0.5s;
+    color: white;
+    box-shadow: 2px 3px 5px #fc7e7e;
+  }
+  
+  .space {
+    height: 10rem;
+  }
+  
+  .spaces {
+    height: 10rem;
+  }
+  
+  .sig {
+    height: 15rem;
+    transform: skewY(-20deg);
+  }
+  
+  .card {
+    border: none;
+    width: 100%;
+  }
+  
+  .link {
+    color: black;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .link:hover {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .li {
+    border: none;
+  }
+  

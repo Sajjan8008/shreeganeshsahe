@@ -1,5 +1,5 @@
-import passport from 'passport.js';
-import { Strategy as PassportLocalStrategy } from 'passport-local.js';
+import passport from 'passport';
+import { Strategy as PassportLocalStrategy } from 'passport-local';
 import Joi from 'joi';
 
 import User from '../models/User.js';

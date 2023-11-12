@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import passport from 'passport.js';
+import passport from 'passport';
 
 const router = Router();
 

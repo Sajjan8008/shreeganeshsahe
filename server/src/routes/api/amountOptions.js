@@ -1,11 +1,11 @@
 import { Router } from 'express';
-import requireJwtAuth from '../../middleware/requireJwtAuth.js.js';
-import AmountOption from '../../models/AmountOption.js.js';
+import requireJwtAuth from '../../middleware/requireJwtAuth.js';
+import AmountOption from '../../models/AmountOption.js';
 import Joi from 'joi';
-import { gameSchema } from '../../services/validators.js.js';
-import { updateStatus } from '../../services/validators.js.js';
-import {  checkpermission, verifyToken  } from '../../helper/common.js.js';
-import logger from '../../services/logger.js.js';
+import { gameSchema } from '../../services/validators.js';
+import { updateStatus } from '../../services/validators.js';
+import {  checkpermission, verifyToken  } from '../../helper/common.js';
+// import logger from '../../services/logger.js';
 const router = Router();
 
 /**
