@@ -11,18 +11,13 @@ import About from '../src/feacher/about/about';
 // import Contact from '../src/feacher/contact/contact';
 import Home from '../src/feacher/homepage/homepage';
 import Main from '../src/feacher/main/index';
-import SideNav from '../src/feacher/sideNav/nav';
 
 function App() {
 
   return (
     <div className="app">
 
-    <Router
-    exact
-    path=''
-    element={<SideNav/>}
-     >
+    <Router >
         <Routes>
 
         <Route
