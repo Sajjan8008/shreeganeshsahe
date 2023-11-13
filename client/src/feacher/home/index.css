@@ -1,0 +1,26 @@
+.Home {
+    background-color: black ;
+    height: 100%;
+}
+.mainHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    height: 100%;
+}
+
+.maintxt{
+    color: orange;
+}
+
+.imgspace{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 auto; */
+    /* height: 100vh; */
+    height: 300px;
+    /* background-color: rgb(198, 14, 14); */
+}

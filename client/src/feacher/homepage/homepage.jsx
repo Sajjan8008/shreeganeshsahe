@@ -4,7 +4,9 @@ import './homepage.css';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Typing from 'react-typing-animation';
 import { Card } from 'react-bootstrap';
-import About from '../about/about'
+import About from '../about/about';
+import Contact from '../contact/contact';
+// import About from '../about/about'
 class Homepage extends Component {
   render() {
     return (
@@ -51,7 +53,10 @@ class Homepage extends Component {
               </Card>
             </div>
           </Card>
+
         </div>
+        <About />
+        <Contact/>
       </div>
     );
   }

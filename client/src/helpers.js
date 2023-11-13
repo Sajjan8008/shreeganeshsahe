@@ -33,7 +33,9 @@ const Helpers = {
 
         }else{
           data = {
-            
+            "name":"sajjan",
+            "city":"Hisar",
+            "State":"Haryana"
           }
         }
 

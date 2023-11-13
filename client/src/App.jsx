@@ -1,21 +1,60 @@
+import { Button } from 'bootstrap';
 import React from 'react';
-import './App.css';
-import Home from '../src/pages/home/index'
-import Header from '../src/feacher/header/index'
-import SideNav from '../src/feacher/sideNav/nav.jsx'
-import Homepage from '../src/feacher/homepage/homepage.jsx';
-import About from '../src/feacher/about/about.jsx';
-import Contact from '../src/feacher/contact/contact.jsx';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
+
+import About from '../src/feacher/about/about';
+// import Contact from '../src/feacher/contact/contact';
+import Home from '../src/feacher/homepage/homepage';
+import Main from '../src/feacher/main/index';
+import SideNav from '../src/feacher/sideNav/nav';
 
 function App() {
+
   return (
-    <div className="App">
-      <Homepage />
-      <SideNav />
-      {/* <Contact /> */}
-      <About />
+    <div className="app">
+
+    <Router
+    exact
+    path=''
+    element={<SideNav/>}
+     >
+        <Routes>
+
+        <Route
+            exact
+            path="/"
+            element={<Main />
+          
+          }
+          />
+
+          <Route
+            exact
+            path="/sajjan"
+            element={<Home />}
+          />
+
+
+          <Route
+            path="/about"
+            element={<About/>}
+          />
+
+
+          <Route
+            path="*"
+            element={<Navigate to="/" />}
+          />
+        </Routes>
+      </Router>
+
     </div>
   );
 }
 
-export default App;
+export default App

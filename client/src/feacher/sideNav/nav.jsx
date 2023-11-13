@@ -86,10 +86,12 @@ class SideNav extends Component {
             </ListGroup>
           </Card.Body>
         </Card>
+        
       </Navbar>
     );
   }
-  componentDidMount() {}
+  // componentDidMount() {}
+
 }
 
 export default SideNav;

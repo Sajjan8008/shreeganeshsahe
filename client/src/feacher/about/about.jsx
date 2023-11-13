@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './about.css'
-import ScrollableAnchor, { goToAnchor } from 'react-scrollable-anchor';
-import { Button, Card, Col, Row } from 'react-bootstrap';
-import { CalendarOutlined, GiftOutlined, HeatMapOutlined, MailOutlined, PhoneOutlined, StarOutlined } from '@ant-design/icons';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { Card, Col, Row } from 'react-bootstrap';
+
+// import { CalendarOutlined, GiftOutlined, HeatMapOutlined, MailOutlined, PhoneOutlined, StarOutlined } from '@ant-design/icons';
 const About = () =>{
+  let [data,setData] = useState({})
+  useEffect(()=>{
+  setData(
+     {
+      "name":"sajjan",
+      "city":"Hisar",
+      "State":"Haryana"
+    }
+  )
+
+
+	}, {})
+
+        // Helpers.httpRequest(
+        //   `http://localhost:5000?file=${this.state.file}`,
+        //   'get','',''
+        // )
+        //   .then(response =>  {
+        //     console.log("response",response);
+        //     setData(response.json())
+
+        //     console.log(data);
+        //   }
+          
+        //   )   
+        //   .catch(error => {
+           
+        //   });
+
     return (
       <ScrollableAnchor id={'section2'}>
         <div>
@@ -40,30 +70,8 @@ const About = () =>{
                                 name='file'
                               />
                             </div>
-
-                        
-
-                            {/* <div className='form-group'>
-                              <Button
-                                variant='primary'
-                                size='lg'
-                                block
-                                className='abtn'
-                                type='submit'
-                              >
-                               Downloading
-                              </Button>
-                            </div> */}
                           </form>
-                          {/* <Button
-                            variant='primary'
-                            size='lg'
-                            block
-                            className='abtn'
-                            onClick={() => goToAnchor('section2')}
-                          >
-                            Send Message
-                          </Button>{' '} */}
+               
                         </div>
                       </Col>
                     </Col>
