@@ -6,10 +6,10 @@ import {
   Navigate
 } from "react-router-dom";
 
-import About from '../src/feacher/about/about';
+import About from './feacher/about/about';
 // import Contact from '../src/feacher/contact/contact';
-import Home from '../src/feacher/homepage/homepage';
-import Main from '../src/feacher/main/index';
+import Home from './feacher/homepage/homepage';
+import Main from './feacher/main/index';
 
 function App() {
 
