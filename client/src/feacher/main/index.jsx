@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Home from '../home';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import './index.css'
 function Main() {
 
@@ -14,10 +14,10 @@ function Main() {
   return (
     <>
       <Home />
-      <Button variant="outline-info" size="lg"
+      {/* <Button variant="outline-info" size="lg"
         onClick={routeChange}
        >Continue
-      </Button>
+      </Button> */}
     </>
   )
 }
