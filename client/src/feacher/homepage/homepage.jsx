@@ -1,9 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
 import './homepage.css';
-import ScrollableAnchor from 'react-scrollable-anchor';
-import Typing from 'react-typing-animation';
-import { Card } from 'react-bootstrap';
+// import ScrollableAnchor from 'react-scrollable-anchor';
+// import Typing from 'react-typing-animation';
+// import { Card } from 'react-bootstrap';
 import About from '../about/about';
 import Contact from '../contact/contact';
 // import About from '../about/about'
@@ -13,7 +13,10 @@ class Homepage extends Component {
       <div align='right'>
           {/* <About/> */}
         <div className='img-1'>
-        <ScrollableAnchor id={'section1'}>
+          <h1>
+            Hello
+          </h1>
+        {/* <ScrollableAnchor id={'section1'}>
               <span><br /></span>
             </ScrollableAnchor>
           <Card className='hcard'>
@@ -52,7 +55,7 @@ class Homepage extends Component {
                 </h4>
               </Card>
             </div>
-          </Card>
+          </Card> */}
 
         </div>
         <About />
