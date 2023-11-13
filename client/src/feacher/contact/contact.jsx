@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Card } from 'react-bootstrap';
+// import { Card } from 'react-bootstrap';
 import './contact.css';
 // import ScrollableAnchor from 'react-scrollable-anchor';
 // import ScrollTrigger from 'react-scroll-trigger';
