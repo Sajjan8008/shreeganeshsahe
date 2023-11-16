@@ -1,9 +1,9 @@
 import React from 'react';
 
-// import { Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import './contact.css';
-// import ScrollableAnchor from 'react-scrollable-anchor';
-// import ScrollTrigger from 'react-scroll-trigger';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import ScrollTrigger from 'react-scroll-trigger';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -44,9 +44,9 @@ class Contact extends React.Component {
   render() {
     return (
       <div className='cimg'>
-        <h1>hello</h1>
-        {/* <div className={this.state.visible ? 'pfadeIn' : 'pfadeOut'}> */}
-          {/* <ScrollableAnchor id={'section4'}>
+      
+        <div className={this.state.visible ? 'pfadeIn' : 'pfadeOut'}>
+          <ScrollableAnchor id={'section4'}>
             <div>
               <span></span>
             </div>
@@ -103,7 +103,7 @@ class Contact extends React.Component {
         </div>
         <ScrollTrigger onEnter={() => this.onEnterViewport()}>
           <span></span>
-        </ScrollTrigger> */}
+        </ScrollTrigger>
       </div>
     );
   }

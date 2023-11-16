@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import './nav.css';
 
-// import { Navbar, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Navbar, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { goToAnchor, configureAnchors } from 'react-scrollable-anchor';
 
 import {

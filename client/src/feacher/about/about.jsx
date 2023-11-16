@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './about.css'
-// import ScrollableAnchor from 'react-scrollable-anchor';
-// import { Card, Col, Row } from 'react-bootstrap';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { Card, Col, Row } from 'react-bootstrap';
 
 // import { CalendarOutlined, GiftOutlined, HeatMapOutlined, MailOutlined, PhoneOutlined, StarOutlined } from '@ant-design/icons';
 const About = () =>{
@@ -36,55 +36,55 @@ const About = () =>{
 
     return (
       <>
-      <h1>Hello</h1>
-      </>
-    //   <ScrollableAnchor id={'section2'}>
-    //     <div>
-    //   <span className='atitle'>About Me</span>
-    //       <div className='atspace'></div>
+      <ScrollableAnchor id={'section2'}>
+        <div>
+      <span className='atitle'>About Me</span>
+          <div className='atspace'></div>
 
-    //       <Card>
-    //           <Row>
-    //             <Col>H</Col>
-    //             <Col className='col'>
-    //               {/* <img src={Me} alt='Logo' className='apic' /> */}
-    //             </Col>
-    //             <Col>
-    //               <Col className='aheader'>
-    //                 I'm sajjan and I'm a Developer
-    //               </Col>
-    //               <Col className='apar'>
-    //                 Hi! My name is <span className='aname'>sajjan</span>. I am a
-    //                 Developer
-    //               </Col>
-    //               <Row className='ar1'>
-    //                 <Col className='awidth'>
+          <Card>
+              <Row>
+                <Col>H</Col>
+                <Col className='col'>
+                  {/* <img src={Me} alt='Logo' className='apic' /> */}
+                </Col>
+                <Col>
+                  <Col className='aheader'>
+                    I'm sajjan and I'm a Developer
+                  </Col>
+                  <Col className='apar'>
+                    Hi! My name is <span className='aname'>sajjan</span>. I am a
+                    Developer
+                  </Col>
+                  <Row className='ar1'>
+                    <Col className='awidth'>
 
-    //                   <Col>
-    //                     <div>
-    //                       <form onSubmit="">
-    //                         <div className='input-group mb-3'>
-    //                           <input
-    //                             disabled=""
-    //                             onChange=""
-    //                             className='aform-control'
-    //                             value="file"
-    //                             type='text'
-    //                             name='file'
-    //                           />
-    //                         </div>
-    //                       </form>
+                      <Col>
+                        <div>
+                          <form onSubmit="">
+                            <div className='input-group mb-3'>
+                              <input
+                                disabled=""
+                                onChange=""
+                                className='aform-control'
+                                value="file"
+                                type='text'
+                                name='file'
+                              />
+                            </div>
+                          </form>
                
-    //                     </div>
-    //                   </Col>
-    //                 </Col>
-    //               </Row>
-    //             </Col>
-    //           </Row>
-    //         </Card>
-    //   </div>
+                        </div>
+                      </Col>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Card>
+      </div>
       
-    // </ScrollableAnchor>
+    </ScrollableAnchor>
+      </>
+
     )
 }
 
