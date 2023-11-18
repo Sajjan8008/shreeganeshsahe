@@ -10,7 +10,6 @@ const router = Router();
 
 router.post('/login', requireLocalAuth, (req, res) => {
 
- 
   const token = req.user.generateJWT( (req.body.appversion ? req.body.appversion : '' ));
   let me = req.user.toJSON();
   me.token = token;
