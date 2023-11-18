@@ -11,7 +11,7 @@ const router = Router();
 router.post('/login', requireLocalAuth, (req, res) => {
 
  
-  const token = req.user.generateJWT( (req.body?.appversion ? req.body.appversion : '' ));
+  const token = req.user.generateJWT( (req.body.appversion ? req.body.appversion : '' ));
   let me = req.user.toJSON();
   me.token = token;
   let headers = req.headers;
@@ -61,7 +61,7 @@ router.post('/login', requireLocalAuth, (req, res) => {
 //Print Game Login
 
 router.post('/login/print', requireLocalAuth, (req, res) => {
-  const token = req.user.generateJWT((req.body?.appversion ? req.body.appversion : '' ));
+  const token = req.user.generateJWT((req.body.appversion ? req.body.appversion : '' ));
   let me = req.user.toJSON();
   me.token = token;
   const lcgame = process.env.PRINT_LC;

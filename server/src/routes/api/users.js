@@ -1298,7 +1298,7 @@ router.post('/registerplayasgust', async (req, res) => {
 
     if( response.user ) {
       
-      response.user.token = await response.user.generateJWT((req.body?.appversion ? req.body.appversion : '' ));
+      response.user.token = await response.user.generateJWT((req.body.appversion ? req.body.appversion : '' ));
     
       response.user.deviceName = req.body.deviceName == undefined ? '' : req.body.deviceName;
       response.user.os = req.body.os == undefined ? '' : req.body.os;  
@@ -1556,7 +1556,7 @@ router.post('/verify-otp', async (req, res) => {
         }
 
         response.user = checkUserExists;
-        response.user.token = checkUserExists.generateJWT( (req.body?.appversion ? req.body.appversion : '' ));
+        response.user.token = checkUserExists.generateJWT( (req.body.appversion ? req.body.appversion : '' ));
         checkUserExists.deviceName = req.body.deviceName == undefined ? '' : req.body.deviceName;
         checkUserExists.os = req.body.os == undefined ? '' : req.body.os;  
         checkUserExists.customerIp = requestIp.getClientIp(req);
@@ -1623,7 +1623,7 @@ router.post('/verify-otp', async (req, res) => {
           // response.user.name = 'Player_'+ response.user.id,
           //await response.user.save();
   
-          response.user.token = await response.user.generateJWT( (req.body?.appversion ? req.body.appversion : '' ) );
+          response.user.token = await response.user.generateJWT( (req.body.appversion ? req.body.appversion : '' ) );
           await response.user.save();
 
           response.message = 'New user has been created..js';

@@ -407,12 +407,12 @@ let paymentUrl = 'https://api.phonepe.com/apis/hermes/pg/v1/pay'
     let data = {
       "merchantId": merchantId,
       "merchantTransactionId": payment.id,
-      "merchantUserId": user?.username,
+      "merchantUserId": user.username,
       "amount": amount*100,
       "redirectUrl": `https://cp.aqkgames.com/response?id=${payment.id}`,
       "redirectMode": "GET",
       "callbackUrl": `https://cp.aqkgames.com/api/payment/ipnstatus`,
-      "mobileNumber": user?.phone,
+      "mobileNumber": user.phone,
       "paymentInstrument": {
         "type": "PAY_PAGE"
       }

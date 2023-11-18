@@ -5,9 +5,7 @@ import bodyParser from 'body-parser';
 import passport from 'passport';
 import routes from './routes/index.js';
 import mongoose from 'mongoose';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.resolve();
 const app = express();
 const isProduction = process.env.NODE_ENV === 'production';
 

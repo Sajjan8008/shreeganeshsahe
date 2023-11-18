@@ -665,9 +665,9 @@ router.post('/tambolabooking', requireJwtAuth, async (req, res) => {
               tnsObject['type'] = singleBet.type == 'ADD' ? 'Wining' : 'Booking'
               tnsObject['game'] = singleBet.game_history_id.game;
               tnsObject['gameid'] = singleBet.game_history_id.id;
-              tnsObject['username'] = (singleBet?.fromUser?.username) ? singleBet?.fromUser?.username : (singleBet?.toUser?.username);
-              tnsObject['userid'] = (singleBet?.fromUser?.id) ? singleBet?.fromUser?.id : (singleBet?.toUser?.id);
-              tnsObject['comment'] = singleBet?.comment;
+              tnsObject['username'] = (singleBet.fromUser.username) ? singleBet.fromUser.username : (singleBet.toUser.username);
+              tnsObject['userid'] = (singleBet.fromUser.id) ? singleBet.fromUser.id : (singleBet.toUser.id);
+              tnsObject['comment'] = singleBet.comment;
 
           
             userBettings.push(tnsObject)

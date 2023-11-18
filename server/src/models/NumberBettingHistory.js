@@ -295,7 +295,7 @@ NumberBettingHistorySchema.methods.tripleChance = async (settings, game, callbac
 let allUserIds = Object.keys(userBets);
 let transactionData = [] ,user;
 
-for await (let userBetKey of allUserIds) {
+for  (let userBetKey of allUserIds) {
 
   user = await User.findById(userBetKey).exec();
 
@@ -817,7 +817,7 @@ NumberBettingHistorySchema.methods.drawNumber = async (settings, game, callback)
 let allUserIds = Object.keys(userBets);
 let transactionData = [] ,user;
 let boatWinningAmount = 0;
-for await (let userBetKey of allUserIds) {
+for  (let userBetKey of allUserIds) {
 
   user = await User.findById(userBetKey).exec();
 

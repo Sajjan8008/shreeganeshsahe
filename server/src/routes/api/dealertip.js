@@ -37,7 +37,7 @@ const router = Router();
     
     let filters = {};
     let username = req.body.username !== undefined ? req.body.username : 0;
-    let perPage = 20, page = parseInt(req.body?.currentPage ? req.body.currentPage : 0);
+    let perPage = 20, page = parseInt(req.body.currentPage ? req.body.currentPage : 0);
 
     filters.comment = 'dealertip.js';
     filters.type = 'SUBTRACT.js';

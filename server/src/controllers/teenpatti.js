@@ -1355,7 +1355,7 @@ const transactionForTeenPatti = async (room,winner,winningSeat,io) => {
 	let allUserIds = Object.keys(userBets);
 	let transactionData = [] ,user;
 
-for await (let userBetKey of allUserIds) {
+for  (let userBetKey of allUserIds) {
 
 user = await User.findById(userBetKey,'coins');
 
