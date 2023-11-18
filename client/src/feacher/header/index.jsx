@@ -1,21 +1,29 @@
 import React from 'react';
 import './index.css'
-const Header = () =>{
+const Header = () => {
     return (
-        <>
-        <div className='mainHeader' > 
+<div className='headercant' >
 
-        <div className='header' >
-        <a href="">s</a>
-        <a href="">s</a>
-        <a href="">s</a>
-        <a href="">s</a>
-        </div>
-        <div>
-            
-        </div>
-        </div>
-        </>
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">Sajjan</a>
+    <ul className="nav justify-content-end">
+            <li className="nav-item">
+                <a className="nav-link"  href="#">Resume</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="#">Git Projects</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="#">Personal</a>
+            </li>
+         
+        </ul>
+  </div>
+</nav>
+
+</div>
+
     )
 }
 

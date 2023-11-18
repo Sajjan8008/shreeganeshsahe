@@ -31,20 +31,14 @@
 
 .type {
   text-align: center;
-  font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px #000000;
 }
 
 .pic {
   border: solid;
-  border-color: grey;
-  border-radius: 75%;
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 200px;
-  width: 200px;
 }
 
 .sp {
@@ -64,7 +58,7 @@
 }
 
 .img-1 {
-  background-image: url(./banner.jpg);
+  /* background-image: url(./banner.jpg); */
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;

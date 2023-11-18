@@ -9,22 +9,21 @@ import {
 import About from './feacher/about/about';
 import Contact from '../src/feacher/contact/contact';
 import Home from './feacher/homepage/homepage';
-import SideNav from './feacher/sideNav/nav';
 import Main from './feacher/main/index';
 
 function App() {
 
   return (
     <div className="app">
-    <Router >
+      <Router >
         <Routes>
 
-        <Route
+          <Route
             exact
             path="/"
             element={<Main />
-          
-          }
+
+            }
           />
 
           <Route
@@ -36,13 +35,17 @@ function App() {
 
           <Route
             path="/about"
-            element={<About/>}
+            element={<About />}
+          />
+          <Route
+            path="/contact"
+            element={<Contact />}
           />
 
 
           <Route
             path="*"
-            element={<Navigate to="/" />}
+            element={<Navigate to="/sajjan" />}
           />
         </Routes>
       </Router>

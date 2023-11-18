@@ -1,8 +1,11 @@
-.mainHeader{
-    display: flex;
+.headercant{
+    /* display: flex; */
+    height: 7vh;
+    border-bottom: 1px solid;
 }
 
-.header{
-    display: flex;
+.nav-item{
+    padding: 10px;
+    /* background-color: aqua; */
     
 }

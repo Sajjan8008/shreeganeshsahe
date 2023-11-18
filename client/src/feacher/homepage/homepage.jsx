@@ -6,13 +6,14 @@ import Typing from 'react-typing-animation';
 import { Card } from 'react-bootstrap';
 import About from '../about/about';
 import SideNav from '../sideNav/nav';
+import Header from '../header/index';
 
-// import Contact from '../contact/contact';
 class Homepage extends Component {
   render() {
     return (
+      <>
+      <Header/>
       <div align='right'>
-          {/* <About/> */}
         <div className='img-1'>
       
         <ScrollableAnchor id={'section1'}>
@@ -24,7 +25,7 @@ class Homepage extends Component {
 
             <div className='c'>
               <Card className='clear'>
-                <Card.Img
+                <Card.Img 
                   src={require('../../assets/bnrr.jpg')}
                   className='pic'
                 />
@@ -57,10 +58,11 @@ class Homepage extends Component {
           </Card>
 
         </div>
-        <SideNav/>
-        <About />
-        {/* <Contact/> */}
+        {/* <SideNav/> */}
       </div>
+        <About />
+      </>
+
     );
   }
 }
