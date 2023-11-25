@@ -1,0 +1,22 @@
+.mainCant{
+    display: flex;
+    flex-direction: column;
+}
+.listcls{
+
+    padding : 10vh 15vh 15vh 15vh;
+}
+.listGroup{
+    box-shadow: 4px 5px 5px 5px black;
+    padding: 5vh;
+    border: 10px bold;
+}
+.heading{
+    text-align: center;
+    padding: 10px;
+}
+
+.listAbout{
+    text-align: justify;
+    margin:1vh 10vh 1vh 15vh;
+}

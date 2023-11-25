@@ -51,46 +51,50 @@ class SideNav extends Component {
                     About
                   </span>
                 </ListGroupItem>
-                {/* <ListGroupItem className='list'>
+                <ListGroupItem className='list'>
                   <span className='link' onClick={() => goToAnchor('section3')}>
                     Portfolio
                   </span>
-                </ListGroupItem> */}
+                </ListGroupItem>
                 <ListGroupItem className='list'>
                   <span className='link' onClick={() => goToAnchor('section4')}>
                     Contact
                   </span>
                 </ListGroupItem>
+
+                <ListGroupItem className='list'>
+                  <span className='link' onClick={() => goToAnchor('section5')}>
+                    Resume
+                  </span>
+                </ListGroupItem>
+
+                <ListGroupItem className='list'>
+                  <span className='link' onClick={() => goToAnchor('section6')}>
+                    Git projects
+                  </span>
+                </ListGroupItem>
+                <ListGroupItem className='list'>
+                  <span className='link' onClick={() => goToAnchor('section7')}>
+                    Personal
+                  </span>
+                </ListGroupItem>
               </ListGroup>
             </Card.Text>
             <div className='spaces'></div>
-            <ListGroup horizontal>
+            {/* <ListGroup horizontal>
               <ListGroup.Item className='li'>
-                <a href='https://github.com/AntCon97' className='link'>
+                <a href='https://github.com/' className='link'>
                   <GithubOutlined />
                 </a>
               </ListGroup.Item>
-              <ListGroup.Item className='li'>
-                <a href='https://twitter.com' className='link'>
-                  <TwitterOutlined />
-                </a>
-              </ListGroup.Item>
-              <ListGroup.Item className='li'>
-                <a
-                  href='https://en.wikipedia.org/wiki/Copyright'
-                  className='link'
-                >
-                  <CopyrightOutlined />
-                </a>
-              </ListGroup.Item>
-            </ListGroup>
+            </ListGroup> */}
           </Card.Body>
         </Card>
         
       </Navbar>
     );
   }
-  // componentDidMount() {}
+  componentDidMount() {}
 
 }
 

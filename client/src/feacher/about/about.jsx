@@ -2,16 +2,17 @@ import React, { useEffect, useState } from 'react';
 import './about.css'
 import ScrollableAnchor from 'react-scrollable-anchor';
 import Contact from '../contact/contact';
+      
 
 const About = () => {
-  let [data, setData] = useState({})
+  let [data, setData] = useState([])
   useEffect(() => {
     setData(
-      {
+      [{
         "name": "sajjan",
         "city": "Hisar",
         "State": "Haryana"
-      }
+      }]
     )
 
 
@@ -32,7 +33,11 @@ const About = () => {
                 Hi! My name is <span className='aname'>sajjan</span>. I am a
                 Developer
               </h6>
-
+              <ul>
+                {data.map(post => (
+                  <li key={post.name}>{post.city} {post.name}</li>
+                ))}
+              </ul>
             </div>
 
 
@@ -41,7 +46,6 @@ const About = () => {
         </ScrollableAnchor>
       </div>
       <Contact />
-
     </>
   )
 }

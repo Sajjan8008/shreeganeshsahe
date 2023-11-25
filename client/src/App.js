@@ -7,7 +7,9 @@ import {
 } from "react-router-dom";
 
 import About from './feacher/about/about';
-import Contact from '../src/feacher/contact/contact';
+import Personal from './feacher/Personal/index';
+import Gitproject from './feacher/GItProjects/index';
+import Resume from './feacher/Personal/index';
 import Home from './feacher/homepage/homepage';
 import Main from './feacher/main/index';
 
@@ -38,14 +40,22 @@ function App() {
             element={<About />}
           />
           <Route
-            path="/contact"
-            element={<Contact />}
+            path="/resume"
+            element={<Resume />}
           />
 
+          <Route
+            path="/Gitproject"
+            element={<Gitproject />}
+          />
+ <Route
+            path="/personal"
+            element={<Personal />}
+          />
 
           <Route
             path="*"
-            element={<Navigate to="/sajjan" />}
+            element={<Navigate to="/" />}
           />
         </Routes>
       </Router>

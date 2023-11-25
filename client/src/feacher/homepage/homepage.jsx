@@ -13,12 +13,13 @@ class Homepage extends Component {
     return (
       <>
       <Header/>
+      <>
       <div align='right'>
         <div className='img-1'>
-      
+{/*       
         <ScrollableAnchor id={'section1'}>
               <span><br /></span>
-            </ScrollableAnchor>
+            </ScrollableAnchor> */}
           <Card className='hcard'>
         
             <span className='space'></span>
@@ -60,6 +61,8 @@ class Homepage extends Component {
         </div>
         {/* <SideNav/> */}
       </div>
+      </>
+
         <About />
       </>
 
